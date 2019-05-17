@@ -471,7 +471,7 @@ body {
     transform: translate(-50%, -50%) scale(0.25);
     transition: all .5s .2s; }
   .popup__left {
-    width: 33.3333333%;
+    width: 33.33333%;
     display: table-cell; }
   .popup__right {
     width: 66.6666667%;
