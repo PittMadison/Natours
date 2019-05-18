@@ -1,3 +1,17 @@
+/*
+/0-600px:  Phone;
+600-900px: Tablet portrait;
+900-1200px: Tablet landscape;
+1200-1800px is where normal styles apply;
+1800px + : Big desctop;
+*/
+/*
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desc
+*/
 @keyframes moveInLeft {
   from {
     opacity: 0;
@@ -35,11 +49,20 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
 
-.preload * {
+.preload {
   -webkit-transition: none !important;
   -moz-transition: none !important;
   -ms-transition: none !important;
@@ -635,7 +658,6 @@ body {
 
 .navigation__nav {
   height: 100vh;
-  width: 100%;
   position: fixed;
   top: 0;
   left: 0;

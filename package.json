@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "scss": "node-sass --watch sass -o css"
+    "compile:sass": "node-sass sass/style.scss css/style.css",
+    "watch:sass": "nodemon -e scss -x \"npm run compile:sass\""
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/PittMadison/Natours#readme",
   "devDependencies": {
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.19.0"
   }
 }
