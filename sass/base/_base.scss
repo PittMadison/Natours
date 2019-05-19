@@ -41,3 +41,8 @@ body {
   -o-transition: none !important;
   transition: none !important;
 }
+
+::selection {
+    background: $color-primary;
+    color: $color-white;
+}
