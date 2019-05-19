@@ -23,11 +23,31 @@
         opacity: 0;
         transform: translate(-50%, -50%) scale(.25);
         transition: all .5s .2s;
+
+        @include respond(laptop-L) {
+            width: 80%;
+        }
+
+        @include respond(tab-land) {
+            width: 85%;
+        }
+
+        @include respond(tab-port) {
+            position: relative;
+        }
     }
 
     &__left {
         width: 33.33333%;
         display: table-cell;
+
+        @include respond(tab-land) {
+            width: 50%;
+            }
+
+        @include respond(tab-port) {
+            display: none;
+        }
     }
 
     &__right {
@@ -35,6 +55,17 @@
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+
+        @include respond(laptop-L) {
+        padding: 1.5rem 5rem;
+        }
+
+        @include respond(tab-land) {
+            width: 50%;
+            }
+        @include respond(tab-port) {
+            width: 50%;
+        }
     }
 
     &__img {
@@ -58,6 +89,17 @@
         -ms-hyphens: auto;
         -webkit-hyphens: auto;
         hyphens: auto;
+
+        @include respond(laptop-L) {
+            margin-bottom: 3rem;
+            font-size: 1.2rem;
+            }
+
+            @include respond(tab-land) {
+                -moz-column-count: 1;
+                column-count: 1;
+                margin-bottom: 1rem;
+            }
     }
 
     //OPEN STATES
@@ -83,10 +125,15 @@
             display: inline-block;
             transition: all .2s;
             line-height: 1;
+
+            @include respond(tab-port) {
+                top: 1rem;
+            }
         }
 
         &:hover {
             color: $color-primary;
         }
     }
+
 }
