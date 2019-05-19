@@ -8,9 +8,15 @@
     z-index: 9999;
     opacity: 0;
     visibility: hidden;
+    -webkit-backdrop-filter: blur(1rem);
+    backdrop-filter: blur(1rem);
     transition: all .3s;
-
     
+    @supports(-webkit-backdrop-filter: blur(1rem)) or (backdrop-filter: blur(1rem)) {
+        -webkit-backdrop-filter: blur(1rem);
+        backdrop-filter: blur(1rem);
+        background-color: rgba($color-black, .3);
+    }
 
     &__content {
         @include absolute-center;
